@@ -1,7 +1,9 @@
 import sqlite3
+import os
 
 def init_db():
-    conn = sqlite3.connect('database.db')
+    db_path = os.getenv("DB_PATH", "database.db")
+    conn = sqlite3.connect(db_path)
     c = conn.cursor()
     c.execute('''
         CREATE TABLE IF NOT EXISTS tasks (

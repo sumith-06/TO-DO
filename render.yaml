@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: todo-app
+    runtime: docker
+    plan: free # Change to starter/standard if needed
+    disk:
+      name: todo-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: DB_PATH
+        value: /var/data/database.db

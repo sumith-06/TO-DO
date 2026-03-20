@@ -16,7 +16,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 # Database setup
-DATABASE = "database.db"
+DATABASE = os.getenv("DB_PATH", "database.db")
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
