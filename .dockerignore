@@ -1,0 +1,14 @@
+__pycache__
+.git
+.env
+.venv
+venv
+env
+*.pyc
+*.pyo
+*.pyd
+.Python
+node_modules
+logs
+*.log
+database.db

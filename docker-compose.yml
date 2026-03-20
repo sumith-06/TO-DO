@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: todo_api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount local directory for live reloading during development
+      - .:/app
+      # Avoid overwriting container's installed packages/cache
+      - /app/__pycache__
+    environment:
+      - APP_ENV=development
+    # Ensure standard output flows properly to terminal
+    tty: true
+
+# Optional: Add named volumes if you need persistent database outside the bind mount
+# volumes:
+#   todo_db:
