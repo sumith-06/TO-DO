@@ -23,8 +23,8 @@ Make sure you have [Python 3.8+](https://www.python.org/downloads/) installed.
 
 1. Clone this repository to your local machine:
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/sumith-06/TO-DO.git
+cd TO-DO
 ```
 
 2. (Optional) Create a virtual environment:
